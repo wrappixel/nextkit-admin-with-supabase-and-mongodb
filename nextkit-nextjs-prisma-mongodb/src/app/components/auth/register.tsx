@@ -73,7 +73,7 @@ export const Register = () => {
 
     return (<>
         <div className="h-screen w-full flex justify-center items-center bg-lightprimary">
-            <div className="md:min-w-[350px] min-w-max">
+            <div className="md:min-w-[400px] min-w-max">
                 <CardBox>
                     <div className="flex justify-center mb-8">
                         <FullLogo />

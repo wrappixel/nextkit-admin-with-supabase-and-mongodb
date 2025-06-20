@@ -70,7 +70,7 @@ export const Login = () => {
 
     return (<>
         <div className="h-screen w-full flex justify-center items-center bg-lightprimary">
-            <div className="md:min-w-[350px] min-w-max">
+            <div className="md:min-w-[400px] min-w-max">
                 <CardBox>
                     <div className="flex justify-center mb-8">
                         <FullLogo />
@@ -104,7 +104,7 @@ export const Login = () => {
                             Sign In
                         </Button>
                         <div className="flex items center gap-2 justify-center mt-6 flex-wrap">
-                            <p className="text-base font-medium text-muted dark:text-darklink">New to Modernize?
+                            <p className="text-base font-medium text-muted dark:text-darklink">New to NextKit?
                             </p>
                             <Link href="/auth/register" className="text-sm font-medium text-primary hover:text-primaryemphasis">Create an account</Link>
                         </div>

@@ -19,7 +19,7 @@ const BoxedLogin = () => {
             <SocialButtons title="or sign in with" />
             <AuthLogin />
             <div className="flex gap-2 text-base text-ld font-medium mt-4  items-center justify-center">
-              <p>New to Modernize?</p>
+              <p>New to NextKit?</p>
               <Link
                 href={"/auth/register"}
                 className="text-primary text-sm font-medium"
