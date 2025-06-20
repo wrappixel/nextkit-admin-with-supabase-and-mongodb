@@ -1,1 +1,1 @@
-# nextkit-admin-with-supabase-and-mongodb 
+# nextkit-admin-with-supabase-and-mongodb  
