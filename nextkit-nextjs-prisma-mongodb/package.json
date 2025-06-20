@@ -1,0 +1,53 @@
+{
+  "name": "modernize-nextjs-free",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "postinstall": "prisma generate",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@iconify/react": "4.1.1",
+    "@prisma/client": "^6.9.0",
+    "@tabler/icons-react": "3.5.0",
+    "@types/lodash": "^4.17.17",
+    "aos": "2.3.4",
+    "apexcharts": "3.49.1",
+    "bcryptjs": "^3.0.2",
+    "chance": "1.1.11",
+    "flowbite": "2.3.0",
+    "flowbite-react": "0.10.1",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "4.17.21",
+    "moment": "2.29.4",
+    "next": "^15.3.4",
+    "react": "^19.1.0",
+    "react-apexcharts": "1.4.1",
+    "react-dom": "^19.1.0",
+    "react-syntax-highlighter": "^15.5.0",
+    "react-toastify": "^11.0.5",
+    "redux-persist": "6.0.0",
+    "sharp": "0.32.6",
+    "simplebar-react": "3.2.5"
+  },
+  "devDependencies": {
+    "@types/aos": "3.0.7",
+    "@types/chance": "1.1.6",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/node": "20",
+    "@types/react": "18",
+    "@types/react-beautiful-dnd": "^13.1.8",
+    "@types/react-big-calendar": "1.8.9",
+    "@types/react-dom": "18",
+    "@types/react-is": "18.3.0",
+    "@types/react-slick": "^0.23.10",
+    "@types/react-syntax-highlighter": "^15.5.13",
+    "postcss": "8",
+    "prisma": "^6.9.0",
+    "tailwindcss": "3.4.4",
+    "typescript": "5"
+  }
+}
