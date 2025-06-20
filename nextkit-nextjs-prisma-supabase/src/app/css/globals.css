@@ -1,0 +1,391 @@
+@import 'tailwindcss';
+
+@import './layouts/container.css';
+@import './layouts/sidebar.css';
+@import './layouts/horizontal.css';
+@import './layouts/header.css';
+@import './pages/dashboards.css';
+@import './pages/auth.css';
+
+@import './override/reboot.css';
+@import './layouts/rtl.css';
+
+@import './theme/default-colors.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@plugin 'flowbite-react/plugin/tailwindcss';
+@source '../../../node_modules/flowbite-react/dist/esm/**/*.mjs';
+@source '../../../.flowbite-react/class-list.json';
+
+@theme {
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-dark-md: var(--shadow-dark-md);
+  --shadow-sm: var(--shadow-sm);
+  --shadow-btn-shadow: var(--shadow-btn-shadow);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-tw: var(--radius-tw);
+
+  --leading-21: var(--leading-21);
+
+  --gap-30: var(--gap-30);
+
+  --padding-15: var(--padding-15);
+  --padding-30: var(--padding-30);
+
+  --margin-30: var(--margin-30);
+
+  --color-cyan-500: var(--color-primary);
+  --color-cyan-600: var(--color-primary);
+  --color-cyan-700: var(--color-primary);
+
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-info: var(--color-info);
+  --color-success: var(--color-success);
+  --color-warning: var(--color-warning);
+  --color-error: var(--color-error);
+  --color-lightprimary: var(--color-lightprimary);
+  --color-lightsecondary: var(--color-lightsecondary);
+  --color-lightsuccess: var(--color-lightsuccess);
+  --color-lighterror: var(--color-lighterror);
+  --color-lightinfo: var(--color-lightinfo);
+  --color-lightwarning: var(--color-lightwarning);
+  --color-border: var(--color-border);
+  --color-bordergray: var(--color-bordergray);
+  --color-lightgray: var(--color-lightgray);
+  --color-muted: var(--color-muted);
+  --color-bodytext: var(--color-bodytext);
+  --color-dark: var(--color-dark);
+  --color-link: var(--color-link);
+  --color-darklink: var(--color-darklink);
+  --color-darkborder: var(--color-darkborder);
+  --color-darkgray: var(--color-darkgray);
+  --color-darkinfo: var(--color-darkinfo);
+  --color-primaryemphasis: var(--color-primary-emphasis);
+  --color-secondaryemphasis: var(--color-secondary-emphasis);
+  --color-warningemphasis: var(--color-warning-emphasis);
+  --color-erroremphasis: var(--color-error-emphasis);
+  --color-successemphasis: var(--color-success-emphasis);
+  --color-infoemphasis: var(--color-info-emphasis);
+  --color-purple:  var(--color-purple);
+  --color-algaegreen:  var(--color-algaegreen)
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 30px;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility container {
+  @apply max-w-[1200px];
+
+  .landingpage & {
+    @apply max-w-[1320px];
+  }
+}
+
+@utility landingpage {
+  & .container {
+    @apply max-w-[1320px];
+  }
+}
+
+@utility dropdown {
+  @apply shadow-md bg-white dark:bg-dark relative rounded-sm dark:shadow-dark-md;
+}
+
+@utility card-title {
+  @apply text-lg font-semibold text-dark dark:text-white;
+}
+
+@utility card-subtitle {
+  @apply text-sm dark:text-darklink font-medium;
+}
+
+@utility border-ld {
+  @apply border-border dark:border-darkborder;
+}
+
+@utility bg-hover {
+  @apply hover:bg-lightgray dark:hover:bg-darkgray;
+}
+
+@utility form-control {
+  & input {
+    @apply border border-border dark:border-darkborder bg-transparent dark:bg-transparent w-full text-sm;
+  }
+
+  & input:focus {
+    @apply border-primary dark:border-primary outline-hidden shadow-none ring-offset-0 ring-transparent;
+  }
+}
+
+@utility form-control-chat {
+  & input {
+    @apply rounded-md border-0 bg-transparent dark:bg-transparent w-full text-sm;
+  }
+
+  & input:focus {
+    @apply border-0! bg-transparent dark:bg-transparent w-full text-sm ring-transparent dark:ring-transparent;
+  }
+}
+
+@utility form-control-rounded {
+  & input {
+    @apply rounded-full border border-border dark:border-darkborder bg-transparent dark:bg-transparent w-full text-sm;
+  }
+
+  & input:focus {
+    @apply border-primary dark:border-primary outline-hidden shadow-none ring-offset-0 ring-transparent;
+  }
+}
+
+@utility form-control-textarea {
+  @apply rounded-full border border-border dark:border-darkborder bg-transparent dark:bg-transparent w-full text-sm p-4;
+
+  &:focus {
+    @apply border-primary dark:border-primary outline-hidden shadow-none ring-offset-0 ring-transparent;
+  }
+}
+
+@utility form-control-input {
+  @apply rounded-md border border-border dark:border-darkborder bg-transparent dark:bg-transparent w-full text-sm;
+
+  &:focus {
+    @apply border-primary dark:border-primary outline-hidden shadow-none ring-offset-0 ring-transparent;
+  }
+}
+
+@utility form-rounded-md {
+  & input {
+    @apply rounded-md border border-border dark:border-darkborder bg-transparent dark:bg-transparent w-full text-sm;
+  }
+
+  & input:focus {
+    @apply border-primary dark:border-primary outline-hidden shadow-none ring-offset-0 ring-transparent;
+  }
+}
+
+@utility form-rounded {
+  & input {
+    @apply rounded-full;
+  }
+}
+
+@utility input-center {
+  & input {
+    @apply text-center;
+  }
+}
+
+@utility elipse {
+  @apply w-[18px] h-[10px];
+}
+
+@utility select-option {
+  & select {
+    @apply bg-muted border-0 text-darklink dark:text-white/80 py-2 ps-4 pe-9 w-auto focus:border-0 focus:ring-0 font-medium;
+  }
+}
+
+@utility select-md {
+  & select {
+    @apply border-ld bg-transparent dark:bg-dark w-full text-sm rounded-md focus:border-primary dark:focus:border-primary focus:ring-0 pr-8;
+  }
+}
+
+@utility select-rounded {
+  & select {
+    @apply border-ld bg-transparent dark:bg-dark w-full text-sm rounded-full focus:border-primary dark:focus:border-primary focus:ring-0;
+  }
+}
+
+@utility select-md-transparent {
+  & select {
+    @apply border-ld bg-transparent dark:bg-gray-800/70 w-full text-sm rounded-md focus:border-primary dark:focus:border-primary focus:ring-0;
+  }
+}
+
+@utility select-rounded-transparent {
+  & select {
+    @apply border-ld bg-transparent dark:bg-gray-800/70 w-full text-sm rounded-full focus:border-primary dark:focus:border-primary focus:ring-0;
+  }
+}
+
+@utility checkbox {
+  @apply h-[18px] w-[18px] border border-bordergray dark:border-darkborder bg-transparent focus:ring-0 focus:ring-offset-0;
+}
+
+@utility text-primary-ld {
+  @apply hover:text-primary dark:hover:text-primary;
+}
+
+@utility left-part {
+  /* Apps */
+  @apply w-80 border-e border-ld p-6;
+}
+
+@utility btn-circle {
+  @apply h-8 w-8 rounded-full flex justify-center items-center p-0 text-ld;
+}
+
+@utility btn-circle-hover {
+  @apply h-9 w-9 flex justify-center items-center rounded-full hover:bg-lightprimary hover:text-primary cursor-pointer bg-transparent;
+}
+
+@utility text-ld {
+  @apply text-dark dark:text-white;
+}
+
+@utility avatar-full {
+  & img {
+    @apply w-full h-full;
+  }
+}
+
+@utility sorting {
+  & button {
+    @apply bg-transparent text-dark dark:text-white p-0;
+  }
+
+  & button:hover {
+    @apply bg-transparent;
+  }
+
+  & button span {
+    @apply p-0;
+  }
+
+  & ul li {
+    @apply px-4 py-2;
+  }
+
+  & ul li button:hover {
+    @apply hover:text-primary;
+  }
+}
+
+@utility bg-primary {
+  /* Button Hover Color Set */
+  &button {
+    @apply hover:bg-primaryemphasis;
+  }
+}
+
+@utility bg-secondary {
+  &button {
+    @apply hover:bg-secondaryemphasis;
+  }
+}
+
+@utility bg-info {
+  &button {
+    @apply hover:bg-infoemphasis;
+  }
+}
+
+@utility bg-error {
+  &button {
+    @apply hover:bg-erroremphasis;
+  }
+}
+
+@utility bg-success {
+  &button {
+    @apply hover:bg-successemphasis;
+  }
+}
+
+@utility bg-warning {
+  &button {
+    @apply hover:bg-warningemphasis;
+  }
+}
+
+@utility ui-button {
+  /* Headlessui */
+  @apply flex items-stretch justify-between text-center py-2.5 px-5 text-white text-center font-medium rounded-full;
+}
+
+@utility ui-button-small {
+  @apply flex items-stretch justify-between text-center py-2 px-6 text-white text-center font-medium rounded-full;
+}
+
+@utility ui-dropdown {
+  @apply text-ld w-full max-w-56! bg-white dark:bg-dark shadow-md dark:shadow-dark-md text-start rounded-sm py-3;
+}
+
+@utility ui-dropdown-item {
+  @apply flex w-full gap-3 cursor-pointer items-center justify-start px-4 py-2 text-sm text-ld hover:text-primary bg-hover focus:bg-hover focus:outline-hidden;
+}
+
+@utility ui-dropdown-animation {
+  @apply origin-top-right transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-hidden data-closed:scale-95 data-closed:opacity-0;
+}
+
+@utility ui-form-control {
+  @apply border border-border dark:border-darkborder bg-transparent dark:bg-transparent w-full text-sm;
+
+  &:focus {
+    @apply border-primary dark:border-primary outline-hidden shadow-none ring-offset-0 ring-transparent dark:ring-transparent dark:focus:ring-0;
+  }
+}
+
+@utility ui-checkbox {
+  @apply h-[18px] w-[18px] border border-bordergray dark:border-darkborder bg-white dark:bg-transparent data-checked:bg-primary dark:data-checked:bg-primary rounded cursor-pointer focus:ring-0 focus:ring-offset-0 outline-hidden;
+}
+
+@layer components {
+
+  body {
+    @apply text-sm overflow-x-hidden dark:bg-dark;
+  }
+
+  body {
+    @apply text-link dark:text-darklink;
+  }
+
+  /*heading text color*/
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-dark dark:text-white font-semibold;
+  }
+
+  input::placeholder {
+    @apply text-darklink dark:text-darklink
+  }
+  button{
+    @apply !cursor-pointer;
+  }
+    .form-control.search input {
+    @apply border border-border dark:border-darkborder bg-transparent dark:bg-transparent w-full text-sm !ps-10;
+  }
+
+}
