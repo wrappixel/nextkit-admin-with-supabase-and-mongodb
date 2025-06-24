@@ -7,15 +7,16 @@
 
 
 <h1 align="center">
-   <a href="https://www.wrappixel.com/templates/materialm-free-nextjs-admin-template/?ref=376" target="_blank" align="center">
-      Nextkit Admin Starter Kit with Supabase, Prisma & Mongodb
-   </a>
+   Nextkit Admin Starter Kit with Supabase, Prisma & Mongodb   
+   
 </h1>
 
-<p align="center">Download most useful and comprehensive 🚀 Free NextJs admin template built for developers 🛠</p>
+
+<p align="center">Connecting frontend to backend just got simpler! 🚀  We built Next Kit as a dedicated starter kit for developers. Effortlessly link with SupaBase, MongoDB, and Prisma ORM. Say goodbye to Database integration headaches!🛠</p>
 
 
-[![materialM Free NextJs Admin Template Demo Screenshot](https://www.wrappixel.com/wp-content/uploads/edd/2025/06/Nextkit-Free-794x456-1.webp)
+
+![materialM Free NextJs Admin Template Demo Screenshot](https://www.wrappixel.com/wp-content/uploads/edd/2025/06/Nextkit-Free-794x456-1.webp)
 
 
 ## 👋 Introduction
