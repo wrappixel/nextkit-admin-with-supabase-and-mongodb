@@ -7,15 +7,16 @@
 
 
 <h1 align="center">
-   <a href="https://www.wrappixel.com/templates/materialm-free-nextjs-admin-template/?ref=376" target="_blank" align="center">
-      Nextkit admin template with supabase and mongodb
-   </a>
+   Nextkit Admin Starter Kit with Supabase, Prisma & Mongodb   
+   
 </h1>
 
-<p align="center">Download most useful and comprehensive 🚀 Free NextJs admin template built for developers 🛠</p>
+
+<p align="center">Connecting frontend to backend just got simpler! 🚀  We built Next Kit as a dedicated starter kit for developers. Effortlessly link with SupaBase, MongoDB, and Prisma ORM. Say goodbye to Database integration headaches!🛠</p>
 
 
-[![materialM Free NextJs Admin Template Demo Screenshot](https://www.wrappixel.com/wp-content/uploads/edd/2025/06/Nextkit-Free-794x456-1.webp)
+
+![materialM Free NextJs Admin Template Demo Screenshot](https://www.wrappixel.com/wp-content/uploads/edd/2025/06/Nextkit-Free-794x456-1.webp)
 
 
 ## 👋 Introduction
@@ -159,7 +160,7 @@ Follow these simple steps to start contributing:
 - <p><a href="https://www.wrappixel.com/templates/category/vuetify-templates/?ref=376">Vuetify Templates</a> from Wrappixel</p>
 - <p><a href="https://www.wrappixel.com/templates/category/nextjs-templates/?ref=376">NextJs Templates</a> from Wrappixel</p>
 - <p><a href="https://www.wrappixel.com/templates/category/nuxt-templates/?ref=376">Nuxt Templates</a> from Wrappixel</p>
-- <p><a href="https://www.wrappixel.com/templates/category/tailwind-dashboard/?ref=376">Tailwind Dashboards</a> from Wrappixel</p>
+- <p><a href="https://www.wrappixel.com/templates/category/tailwind-templates/?ref=376">Tailwind Templates</a> from Wrappixel</p>
 
 ---
 
