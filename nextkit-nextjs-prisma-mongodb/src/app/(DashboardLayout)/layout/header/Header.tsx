@@ -80,7 +80,7 @@ const Header = () => {
             color={"primary"}
             as={Link}
             size={"md"}
-            href="https://adminmart.com/product/modernize-tailwind-nextjs-dashboard-template/"
+            href="https://www.wrappixel.com/templates/nextkit-free-admin-panel-with-supabase-mongodb/"
             className="w-full rounded-md py-0"
           >
             Download Free
