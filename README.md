@@ -8,7 +8,7 @@
 
 <h1 align="center">
    <a href="https://www.wrappixel.com/templates/materialm-free-nextjs-admin-template/?ref=376" target="_blank" align="center">
-      Nextkit admin template with supabase and mongodb
+      Nextkit Admin Starter Kit with Supabase, Prisma & Mongodb
    </a>
 </h1>
 
@@ -159,7 +159,7 @@ Follow these simple steps to start contributing:
 - <p><a href="https://www.wrappixel.com/templates/category/vuetify-templates/?ref=376">Vuetify Templates</a> from Wrappixel</p>
 - <p><a href="https://www.wrappixel.com/templates/category/nextjs-templates/?ref=376">NextJs Templates</a> from Wrappixel</p>
 - <p><a href="https://www.wrappixel.com/templates/category/nuxt-templates/?ref=376">Nuxt Templates</a> from Wrappixel</p>
-- <p><a href="https://www.wrappixel.com/templates/category/tailwind-dashboard/?ref=376">Tailwind Dashboards</a> from Wrappixel</p>
+- <p><a href="https://www.wrappixel.com/templates/category/tailwind-templates/?ref=376">Tailwind Templates</a> from Wrappixel</p>
 
 ---
 
