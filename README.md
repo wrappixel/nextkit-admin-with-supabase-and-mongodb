@@ -1,6 +1,6 @@
   
 <div align="center">
-   <a href="https://www.wrappixel.com/" target="_blank">
+   <a href="https://wrappixel.com/" target="_blank">
       <img src="https://adminmart.github.io/template_api/images/brand-logo/WrapPixel-Logo.svg" alt="sneat-logo" width="100px" height="100px">
    </a>
 </div>
@@ -16,7 +16,7 @@
 
 
 
-![materialM Free NextJs Admin Template Demo Screenshot](https://www.wrappixel.com/wp-content/uploads/edd/2025/06/Nextkit-Free-794x456-1.webp)
+![materialM Free NextJs Admin Template Demo Screenshot](https://images.wrappixel.com/templates/free/nextkit/Nextkit-Free.webp)
 
 
 ## 👋 Introduction
