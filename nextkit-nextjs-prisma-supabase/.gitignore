@@ -16,6 +16,11 @@
 # production
 /build
 
+# env files
+.env
+.env.local
+.env.*.local
+
 # misc
 .DS_Store
 *.pem
@@ -33,3 +38,8 @@ yarn-error.log*
 next-env.d.ts
 
 /src/generated/prisma
+
+# seed files
+generate_seed.js
+seed_to_supabase.js
+supabase_product_seed_data.json
