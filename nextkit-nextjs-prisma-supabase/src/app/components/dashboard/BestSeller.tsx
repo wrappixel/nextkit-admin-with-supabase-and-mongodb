@@ -67,7 +67,7 @@ export const BestSeller = () => {
               {
                 orders && orders.map((item:any,index) => {
                   return (
-                    <div key={index} className="lg:col-span-6 md:col-span-6 col-span-12">
+                    <div key={index} className="lg:col-span-3 md:col-span-3 col-span-12">
                       <Product photo={item.imageUrl} title={item.name} price={item.price} quantity={item.quantity} />
                     </div>
                   )

@@ -54,6 +54,7 @@ export const ProductPerformance = () => {
   const [allproducts, setAllproducts] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [fixedProducts, setFixedProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
   const [openModal, setOpenModal] = useState(false);
   const [openFilterModal , setFilterModal] = useState(false);
   const [activeProduct , setActiveProduct] = useState();
@@ -64,6 +65,7 @@ export const ProductPerformance = () => {
       const response = await fetch("/api/product");
       const result = await response.json();
       setFixedProducts(result.data);
+      setFilteredProducts(result.data);
       setAllproducts(result.data.slice(0,itemsCount));
     } catch (error) {
       console.log(error);
@@ -75,10 +77,10 @@ export const ProductPerformance = () => {
 
   function handleInput() {
     if (inputValue) {
-      const modifiedProducts = allproducts.filter((item: any) => item.name.includes(inputValue));
+      const modifiedProducts = filteredProducts.filter((item: any) => item.name.includes(inputValue));
       setAllproducts(modifiedProducts);
     } else{
-      setAllproducts(fixedProducts)
+      setAllproducts(filteredProducts.slice((currentpagination - 1)*itemsCount, itemsCount*currentpagination))
     }
   }
 
@@ -87,13 +89,13 @@ export const ProductPerformance = () => {
   }, [inputValue]);
 
   function handleRenderedProduct(){
-      const products = fixedProducts.slice((currentpagination - 1)*4,4*currentpagination);
+      const products = filteredProducts.slice((currentpagination - 1)*itemsCount, itemsCount*currentpagination);
       setAllproducts(products)
   }
 
   useEffect(() => {
     handleRenderedProduct();
-  },[currentpagination])
+  },[currentpagination, filteredProducts])
 
 
   async function handleDelete() {
@@ -137,12 +139,11 @@ export const ProductPerformance = () => {
   }
      const [status , setStatus] = useState("All");
      function handleFilterProduct(){
-          if(status == "All"){
-              setAllproducts(fixedProducts.slice(0,4))
-          }else{
-              const modifiedProducts = fixedProducts.filter((item:any) => item.status === status);
-              setAllproducts(modifiedProducts);
-          }
+          const base = status === "All"
+              ? fixedProducts
+              : fixedProducts.filter((item:any) => item.status === status);
+          setFilteredProducts(base);
+          setCurrentPagination(1);
      }
       useEffect(() => {
           handleFilterProduct()
@@ -208,7 +209,7 @@ export const ProductPerformance = () => {
                       <TableRow key={index}>
                         <TableCell>
                           <p className="text-link dark:text-darklink font-medium text-sm w-fit">
-                            {item.id}
+                            {index + 1}
                           </p>
                         </TableCell>
                         <TableCell className="md:min-w-auto max-w-[200px]">
@@ -273,28 +274,18 @@ export const ProductPerformance = () => {
                         }
                       })
                     }} disabled={(currentpagination === 1)} className={`py-1.5 px-4 border-border text-sm font-medium hover:bg-lightprimary hover:text-primary ${currentpagination === 1 ? 'bg-gray-100 cursor-not-allowed text-gray-300 hover:!bg-gray-100 hover:!text-gray-300':'cursor-pointer hover:bg-none hover:text-primary'}`}>Previous</button>
-                    {Array.from({ length: Math.ceil(fixedProducts?.length/itemsCount) }).map((_,index) => (
-                  <button onClick={() => {
-                      setCurrentPagination((prev) => {
-                        if(prev < Math.ceil(fixedProducts.length/itemsCount)){
-                          return prev + 1
-                        }else if(prev === 1){
-                          return prev
-                        }else{
-                          return prev - 1
-                        }
-                      })
-                    }} key={index} className={`py-1.5 px-4 text-sm font-medium border-border hover:bg-lightprimary hover:text-primary cursor-pointer ${currentpagination === (index+1) ? 'bg-lightprimary text-primary':null}`}>{index+1}</button>
+                    {Array.from({ length: Math.ceil(filteredProducts?.length/itemsCount) }).map((_,index) => (
+                  <button onClick={() => setCurrentPagination(index + 1)} key={index} className={`py-1.5 px-4 text-sm font-medium border-border hover:bg-lightprimary hover:text-primary cursor-pointer ${currentpagination === (index+1) ? 'bg-lightprimary text-primary':null}`}>{index+1}</button>
                     ))}
                     <button onClick={() => {
                       setCurrentPagination((prev) => {
-                        if(prev < Math.ceil(fixedProducts.length/itemsCount)){
+                        if(prev < Math.ceil(filteredProducts.length/itemsCount)){
                           return prev + 1
                         }else{
                           return prev
                         }
                       })
-                    }} disabled={currentpagination === Math.ceil(fixedProducts.length/itemsCount)} className={`py-1.5 border-border px-4 text-sm font-medium hover:bg-lightprimary hover:text-primary ${currentpagination === Math.ceil(fixedProducts.length/itemsCount) ? 'bg-gray-100 cursor-not-allowed text-gray-300 hover:!bg-gray-100 hover:!text-gray-300':'cursor-pointer hover:bg-none hover:text-primary'}`}>Next</button>
+                    }} disabled={currentpagination === Math.ceil(filteredProducts.length/itemsCount)} className={`py-1.5 border-border px-4 text-sm font-medium hover:bg-lightprimary hover:text-primary ${currentpagination === Math.ceil(filteredProducts.length/itemsCount) ? 'bg-gray-100 cursor-not-allowed text-gray-300 hover:!bg-gray-100 hover:!text-gray-300':'cursor-pointer hover:bg-none hover:text-primary'}`}>Next</button>
                   </div>
                 </div>
               </div>
