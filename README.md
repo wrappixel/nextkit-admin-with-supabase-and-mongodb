@@ -3,7 +3,7 @@
    <a href="https://wrappixel.com/" target="_blank">
       <img src="https://adminmart.github.io/template_api/images/brand-logo/WrapPixel-Logo.svg" alt="sneat-logo" width="100px" height="100px">
    </a>
-</div>
+</div> 
 
 
 <h1 align="center">
