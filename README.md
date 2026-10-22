@@ -1,4 +1,3 @@
-  
 <div align="center">
    <a href="https://wrappixel.com/" target="_blank">
       <img src="https://adminmart.github.io/template_api/images/brand-logo/WrapPixel-Logo.svg" alt="sneat-logo" width="100px" height="100px">
@@ -151,16 +150,16 @@ Follow these simple steps to start contributing:
 ---
 
 ## 🧭 Useful Links
-- <p><a href="https://www.wrappixel.com/templates/category/admin-dashboard-templates/?ref=376">Admin Templates</a> from Wrappixel</p>
-- <p><a href="https://www.wrappixel.com/templates/category/bootstrap-templates/?ref=376">Bootstrap Templates</a> from Wrappixel</p>
-- <p><a href="https://www.wrappixel.com/templates/category/angular-templates/?ref=376">Angular Templates</a> from Wrappixel</p>
-- <p><a href="https://www.wrappixel.com/templates/category/react-templates/?ref=376">React Template</a> from Wrappixel</p>
-- <p><a href="https://www.wrappixel.com/templates/category/framer-templates/?ref=376">Framer Templates</a> from Wrappixel</p>
--  <p><a href="https://www.wrappixel.com/templates/category/mui-templates/?ref=376">Material UI Templates</a> from Wrappixel</p>
-- <p><a href="https://www.wrappixel.com/templates/category/vuetify-templates/?ref=376">Vuetify Templates</a> from Wrappixel</p>
-- <p><a href="https://www.wrappixel.com/templates/category/nextjs-templates/?ref=376">NextJs Templates</a> from Wrappixel</p>
-- <p><a href="https://www.wrappixel.com/templates/category/nuxt-templates/?ref=376">Nuxt Templates</a> from Wrappixel</p>
-- <p><a href="https://www.wrappixel.com/templates/category/tailwind-templates/?ref=376">Tailwind Templates</a> from Wrappixel</p>
+- <p><a href="https://wrappixel.com/admin-dashboard-templates?ref=376"><b>Admin Templates</b></a> from Wrappixel</p>
+- <p><a href="https://wrappixel.com/bootstrap-templates?ref=376"><b>Bootstrap Templates</b></a> from Wrappixel</p>
+- <p><a href="https://wrappixel.com/angular-templates?ref=376"><b>Angular Templates</b></a> from Wrappixel</p>
+- <p><a href="https://wrappixel.com/react-templates?ref=376"><b>React Template</b></a> from Wrappixel</p>
+- <p><a href="https://wrappixel.com/framer-templates?ref=376"><b>Framer Templates</b></a> from Wrappixel</p>
+-  <p><a href="https://wrappixel.com/mui-templates?ref=376"><b>Material UI Templates</b></a> from Wrappixel</p>
+- <p><a href="https://wrappixel.com/vuetify-templates?ref=376"><b>Vuetify Templates</b></a> from Wrappixel</p>
+- <p><a href="https://wrappixel.com/nextjs-templates?ref=376"><b>NextJs Templates</b></a> from Wrappixel</p>
+- <p><a href="https://wrappixel.com/nuxt-templates?ref=376"><b>Nuxt Templates</b></a> from Wrappixel</p>
+- <p><a href="https://wrappixel.com/tailwind-templates?ref=376"><b>Tailwind Templates</b></a> from Wrappixel</p>
 
 ---
 
@@ -168,4 +167,4 @@ Follow these simple steps to start contributing:
 
 [![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/wrappixel)  [![twitter](https://img.shields.io/badge/twitter-x?style=for-the-badge&logo=x&logoColor=white&color=%230f1419)](https://twitter.com/wrappixel)  [![facebook](https://img.shields.io/badge/facebook-logo?style=for-the-badge&logo=facebook&logoColor=white&color=%230866ff)](https://www.facebook.com/wrappixel)  [![instagram](https://img.shields.io/badge/instagram-logo?style=for-the-badge&logo=instagram&logoColor=white&color=%23F35369)](https://www.instagram.com/wrappixel)  [![youtube](https://img.shields.io/badge/youtube-logo?style=for-the-badge&logo=youtube&logoColor=white&color=%23cc0000)](https://www.youtube.com/@wrappixel)  [![](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/wrappixel)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/wrappixel/nextkit-admin-with-supabase-and-mongodb&root-directory=nextkit-nextjs-prisma-supabase) 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/wrappixel/nextkit-admin-with-supabase-and-mongodb&root-directory=nextkit-nextjs-prisma-supabase)
